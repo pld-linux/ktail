@@ -36,7 +36,7 @@ z menu.
 rm -f missing
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure \
 	--prefix=%{_prefix} \
 	--with-install-root=$RPM_BUILD_ROOT
