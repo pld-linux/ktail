@@ -5,11 +5,6 @@ Version:	0.5.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(es):	X11/Aplicaciones
-Group(pl):	X11/Aplikacje
-Group(pt_BR):	X11/Aplicações
-Group(pt):	X11/Aplicações
 Vendor:		Rolf Jakob <rjakob@duffy1.franken.de>
 Source0:	http://www.franken.de/users/duffy1/rjakob/%{name}-%{version}.tar.gz
 Patch0:		%{name}-am_fix.patch
