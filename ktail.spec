@@ -1,14 +1,15 @@
 Summary:	ktail - monitors files (like tail -f) and pipes
 Summary(pl):	ktail - do monitorowania plików (jak tail -f) i rurek
 Name:		ktail
-Version:	0.4.4
+Version:	0.5.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Vendor:		Rolf Jakob <rjakob@duffy1.franken.de>
-Source0:	ftp://ftp.kde.org/pub/kde/unstable/apps/utils/%{name}-%{version}.tar.bz2
+Source0:	http://www.franken.de/users/duffy1/rjakob/%{name}-%{version}.tar.gz
+Patch0:		%{name}-am_fix.patch
 URL:		http://www.franken.de/users/duffy1/rjakob
 BuildRequires:	qt-devel >= 1.30
 BuildRequires:	kdelibs-devel
@@ -29,10 +30,18 @@ z menu.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-CXXFLAGS="%{rpmcflags}" CFLAGS="%{rpmcflags}" ./configure \
-	--prefix=%{_prefix} --with-install-root=$RPM_BUILD_ROOT
+rm -f missing
+CXXFLAGS="%{rpmcflags}" CFLAGS="%{rpmcflags}" 
+
+aclocal
+autoconf
+automake -a -c
+%configure \
+	--prefix=%{_prefix} \
+	--with-install-root=$RPM_BUILD_ROOT
 %{__make}
 
 %install
