@@ -1,0 +1,19 @@
+--- ./Makefile.am.org	Mon Apr 16 20:16:39 2001
++++ ./Makefile.am	Sat Nov 17 14:05:04 2001
+@@ -2,7 +2,7 @@
+ 
+ SUBDIRS = ktail po doc 
+ 
+-EXTRA_DIST = ktail.kdevprj AUTHORS COPYING ChangeLog INSTALL README TODO ktail.lsm 
++EXTRA_DIST = ktail.kdevprj AUTHORS COPYING ChangeLog INSTALL README TODO ktail.lsm admin 
+ 
+ ####### kdevelop will overwrite this part!!! (end)############
+ # not a GNU package. You can remove this line, if 
+@@ -24,7 +24,6 @@
+ 	$(MAKE) -f admin/Makefile.common package-messages
+ 	$(MAKE) -C po merge
+ 
+-EXTRA_DIST = admin 
+ 
+ dist-hook:
+ 	cd $(top_distdir) && perl admin/am_edit -padmin
