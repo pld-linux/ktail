@@ -15,8 +15,6 @@ BuildRequires:	kdelibs-devel >= 3
 BuildRequires:	qt-devel >= 3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 ktail monitors multiple files and/or command output in one window.
