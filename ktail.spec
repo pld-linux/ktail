@@ -6,10 +6,10 @@ Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Vendor:		Rolf Jakob <rjakob@duffy1.franken.de>
-Source0:	http://www.franken.de/users/duffy1/rjakob/%{name}-%{version}.tar.bz2
-# Source0-md5:	97c243b1c14fe29f266289a7b25b0a60
+Source0:	http://www.duffy1.franken.de/rjakob/%{name}-%{version}.tar.bz2
+# Source0-md5:	596dd464e8c86f32ef89654afca27719
 Patch0:		%{name}-am_fix.patch
-URL:		http://www.franken.de/users/duffy1/rjakob
+URL:		http://www.duffy1.franken.de/rjakob/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 3
