@@ -9,7 +9,7 @@ Source:		%{name}-%{version}.tar.gz
 URL:		http://www.franken.de/users/duffy1/rjakob
 BuildRequires:	qt-devel >= 1.30
 BuildRequires:	kdelibs-devel
-BuildRoot:	/tmp/%{name}-%{version}
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 ktail monitors multiple files and/or command output in one window. Files and
