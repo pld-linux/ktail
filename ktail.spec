@@ -7,8 +7,8 @@ Copyright:	GPL
 Vendor:		Rolf Jakob <rjakob@duffy1.franken.de>
 Source:		%{name}-%{version}.tar.gz
 URL:		http://www.franken.de/users/duffy1/rjakob
-BuildPrereq:	qt-devel >= 1.30
-BuildPrereq:	kdelibs-devel
+BuildRequires:	qt-devel >= 1.30
+BuildRequires:	kdelibs-devel
 BuildRoot:	/tmp/%{name}-%{version}
 
 %description
