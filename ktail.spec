@@ -1,12 +1,12 @@
 Summary:	ktail - monitors files (like tail -f) and pipes
 Name:		ktail
-Version:	0.4.3
+Version:	0.4.4
 Release:	1
 Group:		X11/KDE/Utilities
 ######		Unknown group!
 License:	GPL
 Vendor:		Rolf Jakob <rjakob@duffy1.franken.de>
-Source0:	%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.kde.org/pub/kde/unstable/apps/utils/%{name}-%{version}.tar.bz2
 URL:		http://www.franken.de/users/duffy1/rjakob
 BuildRequires:	qt-devel >= 1.30
 BuildRequires:	kdelibs-devel
