@@ -39,8 +39,3 @@ rm -rf $RPM_BUILD_ROOT
 %{prefix}/share/icons/mini/ktail.xpm
 %{prefix}/share/locale/de/LC_MESSAGES/ktail.mo
 %{prefix}/share/locale/fr/LC_MESSAGES/ktail.mo
-
-%changelog
-* Sat Jul 10 1999 
-  []
-- based on spec written by Troy Engel <tengel@sonic.net>.
