@@ -26,7 +26,7 @@ options.
 
 %description -l pl
 ktail monitoruje wiele plików lub wyj¶æ z komend w jednym okienku.
-Pliki i komendy mog± byæ dodawane i usuane poprzez przesun-i-upu¶æ lub
+Pliki i komendy mog± byæ dodawane i usuwane poprzez przesuñ-i-upu¶æ lub
 z menu.
 
 %prep
