@@ -1,0 +1,40 @@
+--- ktail-0.6.1/ktail/removedlg.h.orig	Thu Jul  4 01:57:21 2002
++++ ktail-0.6.1/ktail/removedlg.h	Tue Jul  1 14:23:28 2003
+@@ -37,6 +37,7 @@
+ protected:
+     QGridLayout* RemoveDlgLayout;
+     QHBoxLayout* Layout3;
++    void languageChange();
+ };
+ 
+ #endif // REMOVEDLG_H
+--- ktail-0.6.1/ktail/logoptdlg.h.orig	Thu Jul  4 01:57:22 2002
++++ ktail-0.6.1/ktail/logoptdlg.h	Tue Jul  1 14:26:40 2003
+@@ -43,6 +43,7 @@
+     QVBoxLayout* Layout3;
+     QGridLayout* GroupBox1Layout;
+     QHBoxLayout* Layout2;
++    void languageChange();
+ };
+ 
+ #endif // LOGOPTDLG_H
+--- ktail-0.6.1/ktail/filterdlg.h.orig	Thu Jul  4 01:57:22 2002
++++ ktail-0.6.1/ktail/filterdlg.h	Tue Jul  1 14:28:37 2003
+@@ -42,6 +42,7 @@
+     QGridLayout* FilterDlgLayout;
+     QHBoxLayout* Layout2;
+     QGridLayout* GroupBox1Layout;
++    void languageChange();
+ };
+ 
+ #endif // FILTERDLG_H
+--- ktail-0.6.1/ktail/cmdlinedlg.h.orig	Thu Jul  4 01:57:22 2002
++++ ktail-0.6.1/ktail/cmdlinedlg.h	Tue Jul  1 14:32:02 2003
+@@ -37,6 +37,7 @@
+     QGridLayout* CmdLineDlgLayout;
+     QVBoxLayout* Layout1;
+     QHBoxLayout* Layout2;
++    void languageChange();
+ };
+ 
+ #endif // CMDLINEDLG_H
