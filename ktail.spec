@@ -6,10 +6,14 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
+Group(es):	X11/Aplicaciones
 Group(pl):	X11/Aplikacje
+Group(pt_BR):	X11/Aplicações
+Group(pt):	X11/Aplicações
 Vendor:		Rolf Jakob <rjakob@duffy1.franken.de>
 Source0:	http://www.franken.de/users/duffy1/rjakob/%{name}-%{version}.tar.gz
 Patch0:		%{name}-am_fix.patch
+Patch1:		%{name}-acfix.patch
 URL:		http://www.franken.de/users/duffy1/rjakob
 BuildRequires:	qt-devel >= 1.30
 BuildRequires:	kdelibs-devel
@@ -31,11 +35,10 @@ z menu.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
-CXXFLAGS="%{rpmcflags}" CFLAGS="%{rpmcflags}" 
-
 aclocal
 autoconf
 automake -a -c
