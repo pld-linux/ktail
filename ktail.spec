@@ -1,17 +1,18 @@
 Summary:	ktail - monitors files (like tail -f) and pipes
 Summary(pl):	ktail - do monitorowania plików (jak tail -f) i rurek
 Name:		ktail
-Version:	0.5.1
-Release:	1
+Version:	0.6.1
+Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Vendor:		Rolf Jakob <rjakob@duffy1.franken.de>
-Source0:	http://www.franken.de/users/duffy1/rjakob/%{name}-%{version}.tar.gz
+Source0:	http://www.franken.de/users/duffy1/rjakob/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-am_fix.patch
-Patch1:		%{name}-acfix.patch
 URL:		http://www.franken.de/users/duffy1/rjakob
-BuildRequires:	qt-devel >= 1.30
-BuildRequires:	kdelibs-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	kdelibs-devel >= 3
+BuildRequires:	qt-devel >= 3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -30,7 +31,6 @@ z menu.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 rm -f missing
