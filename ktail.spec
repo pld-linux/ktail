@@ -9,13 +9,15 @@ Vendor:		Rolf Jakob <rjakob@duffy1.franken.de>
 Source0:	http://www.duffy1.franken.de/rjakob/%{name}-%{version}.tar.bz2
 # Source0-md5:	596dd464e8c86f32ef89654afca27719
 Patch0:		%{name}-am_fix.patch
+Patch1:		%{name}-kde3.patch
 URL:		http://www.duffy1.franken.de/rjakob/
-BuildRequires:	autoconf
-BuildRequires:	automake
+#BuildRequires:	autoconf
+#BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 3
 BuildRequires:	qt-devel >= 3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_htmldir	%{_docdir}/kde/HTML
 
 %description
 ktail monitors multiple files and/or command output in one window.
@@ -29,31 +31,35 @@ z menu.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
+%patch1 -p1
 
 %build
-rm -f missing
-%{__aclocal}
-%{__autoconf}
-%{__automake}
-%configure \
-	--prefix=%{_prefix} \
-	--with-install-root=$RPM_BUILD_ROOT
+#rm -f missing
+#%{__aclocal}
+#%{__autoconf}
+#%{__automake}
+
+kde_appsdir="%{_applnkdir}"; export kde_appsdir
+kde_htmldir="%{_htmldir}"; export kde_htmldir
+kde_icondir="%{_pixmapsdir}"; export kde_icondir
+%configure2_13
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/ktail
-%{_applnkdir}/Utilities/ktail.kdelnk
-%{_docdir}/doc/HTML/en/ktail/index.html
-%{_pixmapsdir}/ktail.xpm
-%{_pixmapsdir}/mini/ktail.xpm
-%lang(de) %{_datadir}/locale/de/LC_MESSAGES/ktail.mo
-%lang(fr) %{_datadir}/locale/fr/LC_MESSAGES/ktail.mo
+%{_applnkdir}/Utilities/ktail.desktop
+%{_pixmapsdir}/*/*/apps/*.png
