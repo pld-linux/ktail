@@ -14,6 +14,7 @@ URL:		http://www.duffy1.franken.de/rjakob/
 #BuildRequires:	autoconf
 #BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 3
+BuildRequires:	libstdc++-devel
 BuildRequires:	qt-devel >= 3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
