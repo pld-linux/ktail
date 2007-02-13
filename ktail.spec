@@ -1,5 +1,5 @@
 Summary:	ktail - monitors files (like tail -f) and pipes
-Summary(pl.UTF-8):   ktail - do monitorowania plików (jak tail -f) i rurek
+Summary(pl.UTF-8):	ktail - do monitorowania plików (jak tail -f) i rurek
 Name:		ktail
 Version:	0.6.1
 Release:	0.1
